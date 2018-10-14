@@ -1,19 +1,12 @@
 {
   "name": "lazy-universal-dotenv",
-  "version": "1.9.1",
+  "version": "2.0.0",
   "description": "Robust Environment Configuration for Universal Applications.",
   "main": "lib/index.cjs.js",
   "module": "lib/index.esm.js",
   "scripts": {
-    "lint": "eslint .",
-    "fix": "eslint --fix .",
-    "format": "prettier --ignore-path .gitignore --write '**/*.js' && npm run fix",
     "test": "jest",
-    "prepare": "rimraf lib && preppy",
-    "precommit": "lint-staged",
-    "release": "git push && release-it --github.release --npm.publish --non-interactive",
-    "release:minor": "git push && release-it --github.release --npm.publish --non-interactive --increment minor",
-    "release:major": "git push && release-it --github.release --npm.publish --non-interactive --increment major"
+    "prepare": "rimraf lib && preppy"
   },
   "engines": {
     "node": ">=6.0.0",
@@ -29,22 +22,14 @@
     "lib/"
   ],
   "license": "Apache-2.0",
-  "author": {
-    "name": "Sebastian Software",
-    "email": "s.werner@sebastian-software.de",
-    "url": "https://www.sebastian-software.de"
-  },
+  "author": "Storybook Team",
   "bugs": {
-    "url": "https://github.com/sebastian-software/universal-dotenv/issues"
+    "url": "https://github.com/storybooks/lazy-universal-dotenv/issues"
   },
-  "homepage": "https://github.com/sebastian-software/universal-dotenv#readme",
+  "homepage": "https://github.com/storybooks/lazy-universal-dotenv#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sebastian-software/universal-dotenv.git"
-  },
-  "pre-commit": "lint-staged",
-  "lint-staged": {
-    "*.js": "eslint"
+    "url": "git+https://github.com/storybooks/lazy-universal-dotenv.git"
   },
   "jest": {
     "testEnvironment": "node"
@@ -54,14 +39,8 @@
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^23.6.0",
     "babel-preset-edge": "^4.13.1",
-    "eslint": "^5.6.0",
-    "eslint-config-readable": "^2.2.0",
-    "flow-bin": "^0.81.0",
-    "husky": "^0.14.3",
     "jest": "^23.6.0",
-    "lint-staged": "^7.2.2",
     "preppy": "^4.3.2",
-    "prettier": "^1.14.2",
     "rimraf": "^2.6.2"
   },
   "dependencies": {
