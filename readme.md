@@ -5,8 +5,6 @@
 
 Lazy Universal DotEnv - A Robust Environment Configuration for Universal Applications.
 
-This solution is heavily inspired by the approach chosen by [Create React App](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#what-other-env-files-can-be-used) and made available for general usage.
-
 ## Features
 
 - Supports loading `.env` files with overriding between different `NODE_ENV` settings and `BUILD_TARGET` configurations.
@@ -39,37 +37,45 @@ Note: `local` files without `NODE_ENV` are not respected when running in `NODE_E
 
 ## Basic Usage
 
-All loading features are enabled by importing the core module itself:
-
 ```js
-import "lazy-dotenv-universal"
+import { getEnvironment } from "lazy-dotenv-universal";
+
+const environment = getEnvironment({ nodeEnv, buildTarget });
+
+const { raw, stringified, webpack } = environment;
 ```
 
 After this you can access all environment settings you have defined in one of your `.env` files.
 
+A .env file:
 ```
 MY_END=awesome
 ```
 
+Webpack config:
+```js
+import { getEnvironment } from "lazy-dotenv-universal";
+
+export default {
+  // ... 
+  plugins: [
+    new webpack.DefinePlugin(getEnvironment().webpack),
+  ],
+  // ...
+}
+```
+
+Code being bundled by webpack:
 ```js
 console.log(process.env.MY_ENV); // -> "awesome"
 ```
 
-## Serialization
-
-The module offers access to all app specific environment settings which should be prefixed with `APP_` e.g. `APP_TITLE = "My App"`.
-
-```js
-import { getEnvironment } from "lazy-dotenv-universal"
-
-const { raw, stringified, webpack } = getEnvironment()
-```
-
-Return values:
+### Serialization
 
 - raw: Just a plain JS object containing all app settings
 - stringified: Plain object but with JSON stringified values
 - webpack: For usage with [Webpacks Define Plugin](https://webpack.js.org/plugins/define-plugin/)
+
 
 ## License
 
