@@ -2,24 +2,18 @@
 
 exports[`Serializes BUILD_TARGET 1`] = `
 Object {
-  "APP_ROOT": Any<String>,
-  "APP_SOURCE": Any<String>,
   "APP_TEST_IS_CLIENT": "true",
   "APP_TEST_OVERRIDE": "overridden",
   "APP_TEST_PATH": "one/two/three.js",
-  "BUILD_TARGET": "client",
-  "NODE_ENV": "test",
+  "TEST_IGNORE": "123",
 }
 `;
 
 exports[`Serializes BUILD_TARGET 2`] = `
 Object {
-  "APP_ROOT": Any<String>,
-  "APP_SOURCE": Any<String>,
   "APP_TEST_IS_CLIENT": "\\"true\\"",
   "APP_TEST_OVERRIDE": "\\"overridden\\"",
   "APP_TEST_PATH": "\\"one/two/three.js\\"",
-  "BUILD_TARGET": "\\"client\\"",
-  "NODE_ENV": "\\"test\\"",
+  "TEST_IGNORE": "\\"123\\"",
 }
 `;

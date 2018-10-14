@@ -1,5 +1,5 @@
 {
-  "name": "universal-dotenv",
+  "name": "lazy-universal-dotenv",
   "version": "1.9.1",
   "description": "Robust Environment Configuration for Universal Applications.",
   "main": "lib/index.cjs.js",

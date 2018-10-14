@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Supports expand of variable from .env 1`] = `
+Object {
+  "APP_TEST_OVERRIDE": "original",
+  "APP_TEST_PATH": "one/two/three.js",
+  "BINARY_PATH": "/usr/local/bin",
+  "EXPAND_PATH": "/usr/bin:/usr/local/bin",
+  "TEST_IGNORE": "123",
+}
+`;
+
+exports[`Supports expand of variable from .env 2`] = `
+Object {
+  "APP_TEST_OVERRIDE": "\\"original\\"",
+  "APP_TEST_PATH": "\\"one/two/three.js\\"",
+  "BINARY_PATH": "\\"/usr/local/bin\\"",
+  "EXPAND_PATH": "\\"/usr/bin:/usr/local/bin\\"",
+  "TEST_IGNORE": "\\"123\\"",
+}
+`;
+
+exports[`Supports expand of variable from environment 1`] = `
+Object {
+  "APP_TEST_OVERRIDE": "original",
+  "APP_TEST_PATH": "one/two/three.js",
+  "EXPAND_DATA": "red,yellow",
+  "TEST_IGNORE": "123",
+}
+`;
+
+exports[`Supports expand of variable from environment 2`] = `
+Object {
+  "APP_TEST_OVERRIDE": "\\"original\\"",
+  "APP_TEST_PATH": "\\"one/two/three.js\\"",
+  "EXPAND_DATA": "\\"red,yellow\\"",
+  "TEST_IGNORE": "\\"123\\"",
+}
+`;

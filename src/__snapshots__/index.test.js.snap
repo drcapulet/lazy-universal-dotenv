@@ -1,43 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Ignores non app-specific settings 1`] = `
+exports[`Doesn't support manually defined envs 1`] = `
 Object {
-  "APP_ROOT": Any<String>,
-  "APP_SOURCE": Any<String>,
   "APP_TEST_OVERRIDE": "overridden",
   "APP_TEST_PATH": "one/two/three.js",
-  "NODE_ENV": "test",
+  "TEST_IGNORE": "123",
 }
 `;
 
-exports[`Ignores non app-specific settings 2`] = `
+exports[`Doesn't support manually defined envs 2`] = `
 Object {
-  "APP_ROOT": Any<String>,
-  "APP_SOURCE": Any<String>,
   "APP_TEST_OVERRIDE": "\\"overridden\\"",
   "APP_TEST_PATH": "\\"one/two/three.js\\"",
-  "NODE_ENV": "\\"test\\"",
-}
-`;
-
-exports[`Supports manually defined envs 1`] = `
-Object {
-  "APP_DATA": "yellow",
-  "APP_ROOT": Any<String>,
-  "APP_SOURCE": Any<String>,
-  "APP_TEST_OVERRIDE": "overridden",
-  "APP_TEST_PATH": "one/two/three.js",
-  "NODE_ENV": "test",
-}
-`;
-
-exports[`Supports manually defined envs 2`] = `
-Object {
-  "APP_DATA": "\\"yellow\\"",
-  "APP_ROOT": Any<String>,
-  "APP_SOURCE": Any<String>,
-  "APP_TEST_OVERRIDE": "\\"overridden\\"",
-  "APP_TEST_PATH": "\\"one/two/three.js\\"",
-  "NODE_ENV": "\\"test\\"",
+  "TEST_IGNORE": "\\"123\\"",
 }
 `;
