@@ -1,6 +1,6 @@
 {
   "name": "lazy-universal-dotenv",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Robust Environment Configuration for Universal Applications.",
   "keywords": [
     "dotenv",
